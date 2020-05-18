@@ -2,10 +2,20 @@
   "name": "sbuts",
   "version": "0.1.0",
   "description": "tiny stub library for nodejs and the browser",
-  "main": "index.js",
-  "scripts": {
-    "test": "pta test.js"
+  "main": "index.cjs",
+  "module": "index.js",
+  "exports": {
+    "import": "./dist/bundle/index.js",
+    "require": "./dist/bundle/index.cjs"
   },
+  "scripts": {
+    "test": "pta test.js",
+    "build": "rollup -c rollup.js"
+  },
+  "files": [
+    "index.js",
+    "index.cjs"
+  ],
   "keywords": [
     "stub",
     "test",
@@ -17,6 +27,7 @@
   "author": "Laurent RENARD",
   "license": "MIT",
   "devDependencies": {
-    "pta": "^0.1.3"
+    "pta": "^0.1.3",
+    "rollup": "^2.10.3"
   }
 }

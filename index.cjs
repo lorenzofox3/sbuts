@@ -1,3 +1,5 @@
+'use strict';
+
 const STUB_EXHAUSTED_ERROR = `stub exhausted, call not expected`;
 
 const descriptor = (calls) => ({
@@ -74,7 +76,7 @@ const fromVoid = () => {
     });
 };
 
-export default function (...args) {
+function index (...args) {
     const [input] = args;
     
     if (typeof input === 'function') {
@@ -89,4 +91,6 @@ export default function (...args) {
         fromGenerator(function* () {
             yield* args;
         }());
-};
+}
+
+module.exports = index;
