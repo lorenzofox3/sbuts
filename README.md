@@ -17,7 +17,6 @@ import stub from 'sbuts';
 // etc
 ```
 
-
 ## Usage
 
 The low level API always come back to a generator to get the best flexibility, but higher level syntax sugar is also available
