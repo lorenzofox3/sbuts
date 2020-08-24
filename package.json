@@ -1,6 +1,6 @@
 {
   "name": "sbuts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "tiny stub library for nodejs and the browser",
   "main": "index.cjs",
   "module": "index.js",
