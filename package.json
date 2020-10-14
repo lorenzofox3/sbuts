@@ -2,11 +2,11 @@
   "name": "sbuts",
   "version": "0.1.1",
   "description": "tiny stub library for nodejs and the browser",
-  "main": "index.cjs",
-  "module": "index.js",
+  "main": "./index.cjs",
+  "module": "./index.js",
   "exports": {
-    "import": "index.js",
-    "require": "index.cjs"
+    "import": "./index.js",
+    "require": "./index.cjs"
   },
   "scripts": {
     "test": "pta test.js",
