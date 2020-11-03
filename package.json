@@ -13,6 +13,7 @@
     "test": "pta test.js",
     "build:tsc": "tsc",
     "build": "npm run build:tsc && rollup -c rollup.js",
+    "prepublish": "npm run build",
     "dev": "tsc -w"
   },
   "files": [
