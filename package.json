@@ -4,17 +4,21 @@
   "description": "tiny stub library for nodejs and the browser",
   "main": "./index.cjs",
   "module": "./index.js",
+  "types": "./index.d.ts",
   "exports": {
     "import": "./index.js",
     "require": "./index.cjs"
   },
   "scripts": {
     "test": "pta test.js",
-    "build": "rollup -c rollup.js"
+    "build:tsc": "tsc",
+    "build": "npm run build:tsc && rollup -c rollup.js",
+    "dev": "tsc -w"
   },
   "files": [
     "index.js",
-    "index.cjs"
+    "index.cjs",
+    "index.d.ts"
   ],
   "keywords": [
     "stub",
@@ -28,6 +32,7 @@
   "license": "MIT",
   "devDependencies": {
     "pta": "^0.1.3",
-    "rollup": "^2.10.3"
+    "rollup": "^2.10.3",
+    "typescript": "~4.0.5"
   }
 }

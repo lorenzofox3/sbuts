@@ -104,3 +104,9 @@ dist
 .tern-port
 
 .idea
+
+index.js
+index.cjs
+index.d.ts
+test.js
+test.d.ts
