@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
     "noImplicitAny": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
@@ -11,12 +10,13 @@
     "allowUnreachableCode": false,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "preserveConstEnums": false,
     "lib": [
       "ESNext",
       "DOM"
     ],
     "alwaysStrict": true,
-    "declaration": true
+    "outDir": "dist"
   },
   "include": [
     "*.ts"

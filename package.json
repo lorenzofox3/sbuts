@@ -2,25 +2,25 @@
   "name": "sbuts",
   "version": "0.4.0",
   "description": "tiny stub library for nodejs and the browser",
-  "main": "./index.cjs",
-  "module": "./index.js",
-  "types": "./index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./index.ts",
   "type": "module",
   "exports": {
-    "import": "./index.js",
-    "require": "./index.cjs"
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
   },
   "scripts": {
-    "test": "pta test.js",
+    "test": "ts-node ./node_modules/.bin/pta --module-loader=cjs test.ts",
     "build:tsc": "tsc",
     "build": "npm run build:tsc && rollup -c rollup.js",
     "prepublish": "npm run build",
     "dev": "tsc -w"
   },
   "files": [
-    "index.js",
-    "index.cjs",
-    "index.d.ts"
+    "dist/index.js",
+    "dist/index.cjs",
+    "index.ts"
   ],
   "keywords": [
     "stub",
@@ -33,8 +33,9 @@
   "author": "Laurent RENARD",
   "license": "MIT",
   "devDependencies": {
-    "pta": "^0.1.3",
-    "rollup": "^2.10.3",
-    "typescript": "~4.0.5"
+    "pta": "~0.2.2",
+    "rollup": "~2.45.1",
+    "ts-node": "~9.1.1",
+    "typescript": "~4.2.4"
   }
 }
